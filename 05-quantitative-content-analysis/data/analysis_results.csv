@@ -1,0 +1,21 @@
+analysis_area,category,metric,value
+Coverage Frequency,The Punch,Count,177
+Coverage Frequency,The Punch,Percent,62.8
+Coverage Frequency,The Guardian,Count,105
+Coverage Frequency,The Guardian,Percent,37.2
+Story Prominence,Inside page,Percent,86.5
+Story Prominence,Front page,Percent,12.1
+Story Prominence,Back page,Percent,1.4
+Journalistic Genre,Straight news,Percent,68.1
+Journalistic Genre,Picture news,Percent,16.3
+Journalistic Genre,Feature,Percent,10.3
+Journalistic Genre,Editorial cartoon,Percent,3.2
+Journalistic Genre,Editorial,Percent,2.1
+Trafficking Type,Forced criminal activities,Percent,50.7
+Trafficking Type,Sexual exploitation of women,Percent,25.2
+Trafficking Type,Forced labour,Percent,12.4
+Trafficking Type,People smuggling,Percent,10.3
+Trafficking Type,Removal of organs,Percent,1.4
+Direction of Coverage,Positive,Percent,63.8
+Direction of Coverage,Negative,Percent,28.7
+Direction of Coverage,Neutral,Percent,7.4

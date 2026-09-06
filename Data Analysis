@@ -1,0 +1,489 @@
+# Ojewale John Jeremiah — Data Analytics Portfolio
+
+## Portfolio Overview
+
+This portfolio presents a collection of practical analytics projects covering **retail sales, financial performance, relational database analysis, customer analytics, inventory and operations, procurement, budgeting, forecasting, data quality, and quantitative research**.
+
+The projects show a progression from academic quantitative analysis with **SPSS**, through spreadsheet-based business analysis in **Microsoft Excel**, to more advanced relational and business analytics work in **MySQL**. Across the portfolio, the focus is not only on writing formulas or queries, but on answering business questions, validating data, identifying patterns, creating reusable reporting structures, and translating results into information that can support management decisions.
+
+> **Portfolio note:** The Interior Fittings project uses synthetic data created specifically for analytics practice. It is not employer or client data. The Excel projects use practice datasets and are presented as portfolio analysis rather than claims of employment experience.
+
+---
+
+## Projects at a Glance
+
+| Project | Primary Tool | Main Business Areas | Core Skills Demonstrated |
+|---|---|---|---|
+| Retail Sales & Outlet Performance Analysis | Microsoft Excel | Retail, sales, product and outlet performance | PivotTables, KPI analysis, dashboards, trend analysis, data-quality review |
+| Financial Performance & Investment Analysis | Microsoft Excel | Financial performance, resource allocation, efficiency | Formulas, PivotTables, financial KPI analysis, dashboards, comparative analysis |
+| Sales, Client & Branch Performance Analytics | MySQL | Sales, customers, employees, branches | Relational modelling, joins, CTEs, window functions, views, procedures, data validation |
+| Interior Fittings Sales, Inventory & Operations Analytics | MySQL | Sales, inventory, customers, procurement, budgeting, operations | Advanced SQL, forecasting, budget variance, RFM, ABC analysis, reorder logic, automated reporting |
+| Quantitative Content Analysis Research | SPSS / Research Methods | Academic research, media data, statistical analysis | Data collection, coding, frequency analysis, quantitative interpretation |
+
+---
+
+# 1. Retail Sales & Outlet Performance Analysis
+
+**Tool:** Microsoft Excel  
+**Workbook:** `Mini SuperStore DataSet Analysis Project (1).xlsx`
+
+## Project Summary
+
+This project analyses a retail SuperStore dataset to understand how **products, categories, outlets, outlet formats and location tiers** contribute to sales performance. The workbook contains a raw-data sheet, supporting analysis through PivotTables, and an Excel dashboard for management-style reporting.
+
+The dataset contains **8,523 retail records**, **1,559 distinct item identifiers**, **16 product categories**, **10 outlets**, **4 outlet types**, and **3 location tiers**. Total recorded sales are approximately **18.59 million**, with average sales of approximately **2,181 per record**.
+
+## Project Goal
+
+The goal was to transform a large retail dataset into a structured performance view that could help answer questions such as:
+
+- Which product categories generate the most sales?
+- Which outlet formats perform best?
+- How does sales performance differ by outlet and location type?
+- Which business segments should management pay closer attention to?
+- Are there data-quality issues that could affect reporting accuracy?
+
+## Analysis Performed
+
+The project uses Excel-based analysis to:
+
+- Aggregate sales by product category.
+- Compare average sales across outlet types.
+- Review performance across outlet location tiers.
+- Analyse sales by the dataset's `Year` field.
+- Summarise item-level sales performance.
+- Build PivotTable-based reporting views.
+- Create a visual dashboard for KPI monitoring and comparison.
+- Review missing and inconsistent values in important data fields.
+
+## Key Findings
+
+The highest-performing product categories by total recorded sales include:
+
+1. **Fruits and Vegetables — approximately 2.82M**
+2. **Snack Foods — approximately 2.73M**
+3. **Household — approximately 2.06M**
+4. **Frozen Foods — approximately 1.83M**
+5. **Dairy — approximately 1.52M**
+
+Average sales also vary materially by outlet format. **Supermarket Type 3** records the highest average sales at approximately **3,694**, compared with approximately **2,316** for Supermarket Type 1, **1,995** for Supermarket Type 2, and **340** for Grocery Stores.
+
+These comparisons demonstrate how outlet structure and product mix can be used to identify stronger and weaker areas of retail performance.
+
+## Data-Quality Review
+
+A data-quality review identified several issues in the raw dataset:
+
+- **1,463 missing `Item_Weight` values**.
+- **2,410 missing `Outlet_Size` values**.
+- Inconsistent `Item_Fat_Content` categories, including `Low Fat`, `low fat`, `LF`, `Regular`, and `reg`.
+- Some values are stored as the text `Null` rather than true blanks.
+- The field named `Sales Profit` is a High/Low classification rather than a conventional profit calculation and is better interpreted as a **Sales Performance Band**.
+- The `Year` field should be interpreted carefully. If it represents outlet establishment year, charts should be labelled accordingly rather than describing it as sales year.
+
+These observations are important because good analysis depends on consistent category definitions, appropriate handling of missing values, and accurate metric labels.
+
+## Skills Demonstrated
+
+**Excel | PivotTables | Data Aggregation | Dashboarding | KPI Reporting | Retail Analytics | Sales Analysis | Data Validation | Trend Analysis | Business Insight**
+
+## Business Value
+
+This project demonstrates the ability to take a large retail dataset, organise it into meaningful performance categories, identify commercial patterns and present the results in a format that can support product, outlet and operational decision-making.
+
+---
+
+# 2. Financial Performance & Investment Analysis
+
+**Tool:** Microsoft Excel  
+**Workbook:** `Amazon Financial Dataset (1).xlsx`
+
+## Project Summary
+
+This project analyses a financial practice dataset covering **50 U.S. states**. The dataset includes R&D expenditure, marketing expenditure, campaign activity, profit, employee count and product count. Additional calculated measures are used to compare operating efficiency and the relationship between profit and different forms of business investment.
+
+Across the dataset, total R&D expenditure is approximately **$7.33M**, total marketing expenditure is approximately **$5.55M**, total recorded profit is approximately **$2.99M**, with **331 campaigns**, **10,400 employees**, and **1,880 products** represented.
+
+## Project Goal
+
+The goal was to evaluate financial and operational performance across geographic markets and answer questions such as:
+
+- Which states generate the highest profit?
+- Where is investment producing stronger or weaker outcomes?
+- How does profit compare with R&D and marketing expenditure?
+- Which markets appear more efficient on a per-employee or per-product basis?
+- How can financial data be converted into management-ready comparisons?
+
+## Analysis Performed
+
+The workbook includes:
+
+- State-by-state profit analysis.
+- Comparison of R&D expenditure and profit.
+- Comparison of marketing expenditure and profit.
+- Campaign-count analysis.
+- Profit per employee.
+- Profit per product.
+- Profit relative to marketing spend.
+- Profit relative to R&D spend.
+- Profit relative to combined R&D and marketing expenditure.
+- PivotTable-based financial comparisons.
+- Dashboard views for management-style performance monitoring.
+
+## Key Findings
+
+The strongest states by absolute recorded profit include **New Mexico, Pennsylvania, South Dakota, Hawaii and Michigan**. New Mexico records the highest profit in the dataset at approximately **$79,991**.
+
+Efficiency analysis also reveals a different performance picture from absolute profit. For example, **Idaho** records the highest profit per employee in the dataset at approximately **$573 per employee**, showing why management should compare both total output and efficiency-based indicators rather than relying on a single KPI.
+
+## Metric Interpretation
+
+Some metric names in the original workbook require careful interpretation:
+
+- `Profit Margin` is calculated as profit divided by combined R&D and marketing spend. Because the dataset does not contain revenue, this is better described as a **profit-to-spend ratio**, not conventional profit margin.
+- `Marketing ROI` and `R&D ROI` represent profit relative to the respective spend values. They are useful comparative efficiency measures, but should be described precisely rather than treated as a full investment-return model without additional revenue/cash-flow information.
+
+This distinction improves the accuracy and credibility of financial reporting.
+
+## Skills Demonstrated
+
+**Excel | Financial Analysis | PivotTables | KPI Development | Dashboarding | Efficiency Analysis | Comparative Analysis | Business Planning Support | Management Reporting**
+
+## Business Value
+
+The project demonstrates how financial and operating data can be combined to compare markets, assess resource allocation and identify performance differences that may support budgeting, planning and management review.
+
+---
+
+# 3. Sales, Client & Branch Performance Analytics
+
+**Tool:** MySQL 8.0+  
+**SQL File:** `Ojewale_John_Rewritten_SQL_Business_Analytics_Project.sql`
+
+## Project Summary
+
+This project is a complete relational SQL business-analysis project built around **employees, branches, clients, suppliers and sales relationships**. It develops the original personal SQL project into a structured portfolio project with valid relational design, data-quality checks and reusable analytical reporting.
+
+The database is designed to demonstrate both **SQL fundamentals and advanced analytical SQL**, moving from table creation and filtering to management-level analysis using CTEs, window functions, views, stored procedures and audit triggers.
+
+## Project Goal
+
+The goal was to build a clean relational database and use SQL to answer practical business questions, including:
+
+- Which salespeople generate the most sales?
+- Which clients contribute the most value?
+- Which branches contribute the largest share of recorded sales?
+- Which employees have no recorded client sales?
+- Which clients are supported by more than one salesperson?
+- How can branch-level reporting be made reusable?
+- How can database integrity and auditability be improved?
+
+## Database Structure
+
+The project models five primary business entities:
+
+- **Employees**
+- **Branches**
+- **Clients**
+- **Sales relationships (`works_with`)**
+- **Branch suppliers**
+
+The schema uses primary keys, foreign keys, referential actions, CHECK constraints and indexes to create a structured relational model.
+
+## Analysis Performed
+
+The project includes:
+
+- Workforce and salary KPIs.
+- Total sales by salesperson.
+- Client lifetime sales/value.
+- Branch contribution to company sales.
+- Salesperson ranking.
+- Client ranking within branches.
+- Performance variance from average salesperson sales.
+- Salary-band classification using CASE expressions.
+- Client-value segmentation.
+- Duplicate and missing-assignment checks.
+- Outer joins to retain employees or branches with missing relationships.
+- Subqueries for threshold-based business questions.
+- Reusable reporting views.
+- A stored procedure for branch-level management reporting.
+- Trigger-based employee audit logging.
+
+## SQL Techniques Demonstrated
+
+**Database Design | Primary Keys | Foreign Keys | CHECK Constraints | Indexes | INNER JOIN | LEFT JOIN | Aggregations | GROUP BY | HAVING | CASE | Subqueries | CTEs | ROW_NUMBER | DENSE_RANK | Windowed Percentages | Views | Stored Functions | Stored Procedures | Triggers | Audit Tables | Data Validation**
+
+## Business Value
+
+This project demonstrates the ability to design a relational dataset, maintain data integrity, write reusable analytical SQL and answer business questions about customer value, employee performance and branch contribution.
+
+---
+
+# 4. Interior Fittings Sales, Inventory & Operations Analytics
+
+**Tool:** MySQL 8.0+  
+**SQL File:** `Interior_Fittings_Sales_Inventory_Operations_Analytics_MySQL.sql`  
+**Currency:** Nigerian Naira (NGN)  
+**Dataset:** Synthetic portfolio dataset
+
+## Project Summary
+
+This is the most comprehensive project in the portfolio. It models an **interior-design and fittings business** and combines sales, customer, product, inventory, store, supplier, procurement, budgeting and expense data in a single relational analytics environment.
+
+The project was designed to demonstrate the type of analysis required in a commercial Data Analyst role where management needs more than sales totals. It focuses on the full decision-making chain: **what sold, who bought it, where it sold, whether targets were achieved, what stock is available, what needs to be reordered, which suppliers perform well, and what future demand may look like**.
+
+## Project Goal
+
+The project aims to create a management-ready analytical system capable of answering questions across five major areas:
+
+1. **Commercial performance** — revenue, gross profit, product and store performance.
+2. **Customer performance** — lifetime value, segments and customer prioritisation.
+3. **Inventory management** — stock health, reorder quantities, turnover and slow-moving products.
+4. **Procurement and supplier performance** — lead times, on-time delivery and fill rates.
+5. **Planning and reporting** — budgets, expenses, trends, forecasts and recurring KPI reporting.
+
+## Data Model
+
+The project includes:
+
+- **8 product categories**.
+- **6 suppliers** with standard lead times.
+- **10 interior-fittings products/SKUs**.
+- **3 operating locations**: two showrooms and one warehouse.
+- **30 customers** across contractor, homeowner, property developer and interior-design-firm segments.
+- Sales orders across **2025**, using Showroom, B2B Project, Online and Referral channels.
+- Order-line detail with quantity, price, cost and discount information.
+- Inventory snapshots with opening stock, receipts, sales and closing stock.
+- Monthly sales and expense budgets.
+- Operating expenses.
+- Purchase orders and supplier receipts.
+
+## Data Quality & Integrity
+
+The database includes both preventive controls and analytical checks:
+
+- CHECK constraints for valid quantities, prices, discounts, budgets and dates.
+- Foreign keys to preserve entity relationships.
+- Indexes to support analytical query performance.
+- Duplicate-SKU checks.
+- Price/cost relationship checks.
+- Inventory arithmetic validation.
+- Validation of suspicious sales-line values.
+- Foreign-key completeness checks.
+- Cancelled-order analysis as both a process KPI and data-review measure.
+- Inventory triggers that prevent invalid negative or inconsistent stock records.
+
+## Sales & Commercial Analysis
+
+The project analyses:
+
+- Executive sales KPIs.
+- Net sales and gross profit.
+- Gross-margin percentage.
+- Average order value.
+- Units sold.
+- Monthly sales trends.
+- Month-over-month growth using `LAG()`.
+- Product and category revenue.
+- Product profitability.
+- Product sales contribution.
+- Product and store rankings using window functions.
+- Sales-channel mix, including B2B project performance.
+
+## Budgeting & Planning Analysis
+
+The project compares actual performance with planned targets through:
+
+- Monthly sales budget vs actual sales.
+- Sales variance and budget-attainment percentages.
+- Year-to-date sales budget performance by store.
+- Expense budget vs actual operating expense.
+- Expense variance by store.
+
+This provides a clear framework for management reporting and resource-allocation discussions.
+
+## Forecasting & Trend Analysis
+
+The project includes a transparent **three-month moving-average forecast** based on recent monthly sales. It also calculates rolling averages and month-over-month changes.
+
+The forecast is intentionally a business-planning forecast rather than a machine-learning model. Its purpose is to demonstrate a clear, explainable forecasting approach that management can follow and reproduce.
+
+## Customer Analysis
+
+Customer analysis includes:
+
+- Customer lifetime sales.
+- Customer lifetime gross profit.
+- Customer-value ranking.
+- Performance by customer segment.
+- Sales per customer.
+- An RFM-style prioritisation model using **recency, frequency and monetary value**.
+- Quartile scoring with `NTILE()` to identify higher-priority customer groups.
+
+## Inventory Analysis
+
+The inventory section is designed around operational decision-making and includes:
+
+- Current stock health.
+- Latest inventory position using `ROW_NUMBER()`.
+- Reorder status based on reorder level and safety stock.
+- Recent 90-day demand.
+- Average daily sales.
+- Days of stock available.
+- Reorder recommendations based on recent demand, supplier lead time and safety stock.
+- Inventory turnover by product.
+- Slow-moving product identification.
+- Stock that may be tying up working capital.
+
+## Procurement & Supplier Analysis
+
+Supplier and purchasing analysis includes:
+
+- Supplier lead-time performance.
+- Average actual delivery days.
+- On-time delivery rate.
+- Purchase-order quantity ordered vs quantity received.
+- Supplier fill rate.
+
+These measures connect inventory availability to procurement performance rather than treating stock as an isolated metric.
+
+## Management Reporting & Automation
+
+The project creates reusable reporting structures through:
+
+- Analytical views for transaction-level, monthly, inventory and budget reporting.
+- Stored functions for gross-margin and stock-status logic.
+- A monthly management reporting stored procedure.
+- A reorder-recommendation stored procedure.
+- A management KPI snapshot table.
+- A stored procedure to refresh monthly KPI snapshots.
+- An optional MySQL Event Scheduler example for recurring monthly refreshes.
+
+## Advanced SQL Techniques Demonstrated
+
+**Relational Modelling | CTEs | CASE | COALESCE | NULLIF | GREATEST | CEIL | Date Functions | LAG | ROW_NUMBER | DENSE_RANK | NTILE | Running Calculations | Window Functions | Views | Stored Functions | Stored Procedures | Triggers | Indexes | Constraints | Data Validation | Automated KPI Structures**
+
+## Business Value
+
+This project demonstrates an end-to-end analytical approach suitable for a retail, construction, interior-fittings or operations environment. It connects sales and profitability with inventory, purchasing, customers, budgets and operational performance so that management can move from reporting what happened to deciding what to do next.
+
+---
+
+# 5. Quantitative Content Analysis Research
+
+**Tool:** SPSS / Quantitative Research Methods  
+**Institution:** Anchor University, Lagos  
+**Project:** Final-Year Research — *Reportage of Human Trafficking in Nigerian Newspapers*
+
+## Project Summary
+
+This academic project represents the earliest formal analytics work in the portfolio. It used **quantitative content analysis** to study patterns in newspaper coverage of human trafficking.
+
+The research involved collecting, organising and coding content from three newspaper publications, including *The Guardian* and *Punch*, and comparing reporting patterns and frequencies across the selected publications.
+
+## Project Goal
+
+The aim was to convert qualitative media content into structured quantitative data that could be analysed systematically to understand the level and pattern of reporting on human trafficking.
+
+## Analysis Process
+
+The research involved:
+
+- Defining research categories for content classification.
+- Collecting relevant newspaper content.
+- Organising observations into a structured coding framework.
+- Coding and classifying the content for quantitative analysis.
+- Using **SPSS** to support frequency and descriptive analysis.
+- Comparing reporting patterns across publications.
+- Interpreting results and using the evidence to support research conclusions.
+
+## Skills Demonstrated
+
+**SPSS | Quantitative Research | Content Analysis | Data Collection | Data Coding | Classification | Frequency Analysis | Descriptive Statistics | Research Interpretation | Evidence-Based Conclusions**
+
+## Portfolio Value
+
+This project shows that the analytical foundation behind the portfolio began during university and includes research design, structured data collection, classification and statistical interpretation, not only later software training.
+
+---
+
+# How the Projects Work Together
+
+The projects are intentionally different because each demonstrates a different part of the analytics workflow:
+
+- The **SuperStore project** demonstrates retail analysis, Excel PivotTables, dashboards, KPI reporting and data-quality awareness.
+- The **Financial project** demonstrates financial comparison, efficiency metrics and management-oriented business analysis in Excel.
+- The **Sales, Client & Branch SQL project** demonstrates relational database design and progressively advanced SQL analysis.
+- The **Interior Fittings project** demonstrates a complete business analytics model combining sales, inventory, customers, procurement, budgets, forecasting and automated reporting.
+- The **SPSS research project** demonstrates quantitative research, data coding and statistical analysis from the academic stage of the analytics journey.
+
+Together, the portfolio covers the main stages of a Data Analyst workflow:
+
+**Collect / Structure Data → Validate Data → Analyse Performance → Identify Trends → Build KPIs → Segment / Rank → Forecast / Plan → Report Findings → Support Decisions**
+
+---
+
+# Portfolio Skills Summary
+
+### Data Analysis
+Sales Analysis • Retail Analytics • Customer Analysis • Financial Analysis • Operational Analysis • Inventory Analysis • Trend Analysis • KPI Analysis • Budget Variance • Forecasting • Procurement Analysis
+
+### Data Quality
+Missing-Value Review • Category Standardisation • Validation Queries • Constraints • Referential Integrity • Inventory Reconciliation • Data Accuracy Checks
+
+### Microsoft Excel
+PivotTables • Formulas • Calculated Metrics • KPI Reporting • Dashboard Development • Comparative Analysis • Data Validation
+
+### SQL / MySQL
+Relational Database Design • Joins • Aggregations • Subqueries • CASE • CTEs • Window Functions • Ranking • Views • Functions • Stored Procedures • Triggers • Indexes • Reusable Reporting Queries
+
+### Statistics & Research
+SPSS • Quantitative Content Analysis • Data Coding • Frequency Analysis • Descriptive Statistics • Research Interpretation
+
+### Business Communication
+Management Reporting • Business Insight • KPI Interpretation • Recommendation Development • Translating Technical Results for Non-Technical Stakeholders
+
+---
+
+# Portfolio Coverage by Business Need
+
+| Business Need | Portfolio Evidence |
+|---|---|
+| Sales analysis | SuperStore, Sales/Client SQL, Interior Fittings |
+| Customer analysis | Sales/Client SQL, Interior Fittings |
+| Retail analysis | SuperStore, Interior Fittings |
+| Inventory analysis | Interior Fittings |
+| Financial analysis | Financial Performance project, Interior Fittings |
+| Budget vs actual | Interior Fittings |
+| Forecasting | Interior Fittings — 3-month moving average |
+| Data quality | SuperStore review, both SQL projects |
+| Dashboarding | SuperStore and Financial Excel projects |
+| Advanced SQL | Both MySQL projects |
+| Automated / reusable reporting | SQL views, procedures and KPI snapshots |
+| Statistical analysis | SPSS academic research |
+| Management insights | Across all business-focused projects |
+
+---
+
+# Current Development Direction
+
+A strong next step for the portfolio is to connect the **Interior Fittings MySQL project to Power BI** and create an executive dashboard covering:
+
+- Revenue and gross profit.
+- Budget vs actual.
+- Product/category performance.
+- Customer value.
+- Inventory status and reorder risk.
+- Supplier performance.
+- Monthly trends and forecast.
+
+That would demonstrate a complete analytics pipeline from **relational database → SQL transformation and validation → business analysis → interactive BI dashboard**.
+
+---
+
+## Author
+
+**Ojewale John Jeremiah**  
+Data Analyst | Business Intelligence | Sales & Operations Analytics
+

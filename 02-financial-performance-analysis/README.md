@@ -1,5 +1,3 @@
-
-# Financial Performance & Investment Analysis
 # Financial Performance & Investment Analysis
 
 ## Project Overview

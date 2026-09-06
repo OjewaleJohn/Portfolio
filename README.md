@@ -400,7 +400,7 @@ I am open to opportunities in:
 
 **Location:** Lagos, Nigeria  
 **Email:** ojewalejohn2017@gmail.com  
-**LinkedIn:** Add LinkedIn profile link  
+**LinkedIn:** https://www.linkedin.com/in/john-ojewale-257468225/   
 **Data Portfolio:** This repository
 
 ---
